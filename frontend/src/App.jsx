@@ -11,8 +11,7 @@ import {
 import PaymentAnalyzer from "./components/PaymentAnalyzer";
 import "./App.css";
 
-const API_URL = "http://127.0.0.1:8000";
-
+const API_URL = "https://vigilpay-zi01.onrender.com";
 function App() {
   const [scans, setScans] = useState([]);
   const [loading, setLoading] = useState(true);

@@ -7,8 +7,7 @@ import {
   XCircle,
 } from "lucide-react";
 
-const API_URL = "http://127.0.0.1:8000";
-
+const API_URL = "https://vigilpay-zi01.onrender.com";
 function PaymentAnalyzer() {
   const [upiId, setUpiId] = useState("");
   const [amount, setAmount] = useState("");
