@@ -29,17 +29,15 @@ app = FastAPI(
 # Development configuration only.
 app.add_middleware(
     CORSMiddleware,
-  
-allow_origins=[
-    "http://localhost:5173",
-    "http://localhost:5174",
-],
-
-    allow_credentials=False,
-    allow_methods=["GET", "POST"],
-    allow_headers=["Content-Type", "Authorization"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://localhost:5174",
+        "https://vigilpay-dashboard.onrender.com",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
-
 
 class AnalyzeRequest(BaseModel):
     upi_id: str = Field(min_length=3, max_length=100)
